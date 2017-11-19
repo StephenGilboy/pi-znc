@@ -1,6 +1,6 @@
 FROM arm32v7/debian:latest
 WORKDIR /usr/local/src
-COPY ./znc-1.6.5.tar.gz .
+RUN wget https://znc.in/releases/znc-latest.tar.gz .
 RUN tar -xzcf znc-1.6.5.tar.gz
 RUN cd znc*
 RUN ./configure
